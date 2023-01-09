@@ -18,8 +18,8 @@ const TodoList = ({ todos }) => {
     <UnorderedList>
       {todos.map((todo) => {
         return (
-          <Flex maxW={"600px"} justifyContent="space-between">
-            <Link key={todo.id} as={NextLink} href={`/tasks/${todo.id}`}>
+          <Flex maxW={"600px"} justifyContent="space-between" key={todo.id}>
+            <Link as={NextLink} href={`/tasks/${todo.id}`}>
               <ListItem>{todo.task}</ListItem>
             </Link>
             <Flex>

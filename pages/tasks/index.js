@@ -33,8 +33,13 @@ const Tasks = ({ todos }) => {
 
           {todos.map((todo) => {
             return (
-              <Flex maxW={"600px"} justifyContent="space-between" mb="10px">
-                <Link key={todo.id} as={NextLink} href={`/tasks/${todo.id}`}>
+              <Flex
+                maxW={"600px"}
+                justifyContent="space-between"
+                mb="10px"
+                key={todo.id}
+              >
+                <Link as={NextLink} href={`/tasks/${todo.id}`}>
                   <ListItem>{todo.task}</ListItem>
                 </Link>
                 <Flex minW="100px" justifyContent={"space-between"}>
